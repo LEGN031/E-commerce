@@ -12,5 +12,5 @@ DB_PASSWORD = os.getenv("DB_PASSWORD")
 #db_client = MongoClient("mongodb://localhost:27017/")
 
 #remote
-db_client = MongoClient(f"mongodb+srv://medinae663_db_user:{DB_PASSWORD}@bde-commerce.vmwieff.mongodb.net/")
+dbConection = MongoClient(f"mongodb+srv://medinae663_db_user:{DB_PASSWORD}@bde-commerce.vmwieff.mongodb.net/")
 

@@ -13,11 +13,19 @@ class Sellers(BaseModel):
     documentID:     str
     sellsQuantity:  int
 
+class SellersAccounts(Sellers):
+    email:          str
+    password:       str
+
 class Users(BaseModel):
-    idUsers:        Optional[str] = None
+    idUser:        Optional[str] = None
     fullName:       str
     documentID:     str
     aticlesBought:  list
+
+class UsersAccounts(Users):
+    email:          str
+    password:       str
 
 class Purchases(BaseModel):
     idPurchases:        Optional[str] = None

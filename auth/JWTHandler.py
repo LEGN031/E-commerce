@@ -9,7 +9,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 ALGORITHM = os.getenv('ALGORITHM')
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 30))
 
-def create_acces_token(data: dict, expiresDelta:timedelta| None=None):
+def create_access_token(data: dict, expiresDelta:timedelta| None=None):
     toEncode=data.copy()
     expires=datetime.utcnow() + (expiresDelta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
     toEncode.update({"exp": expires})
